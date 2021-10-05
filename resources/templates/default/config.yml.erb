@@ -1,0 +1,31 @@
+broker:
+  address: 'kafka.service:9092'
+  consumer_group: dswatcher  # Kafka consumer group ID
+  netflow_topics:
+    - rb_flow_discard  # Topic to look up for the Option Template where the serial number is
+  limits_topics:
+    - rb_limits        # Topic listen for notification about sensors limits
+
+decoder:
+  element_id: 300              # Netflow element id of the serial number
+  option_template_id: 258      # ID of the Option Template where the serial number is
+  product_type_element_id: 144 # Element ID of the field used to verify the DeviceID
+
+updater:
+  chef_server_url: 'erchef.service:8000'
+  node_name: admin
+  client_key: /etc/dswatcher/admin.pem
+  serial_number_path: redBorder/serial_number
+  ipaddress_path: ipaddress
+  observation_id_path: redBorder/observation_id
+  sensor_uuid_path: redBorder/sensor_uuid
+  product_type_path: redBorder/product_type
+  blocked_status_path: redBorder/blocked
+  organization_uuid_path: redBorder/organization_uuid
+  fetch_interval_s: 60                          # Time between updates of the internal sensors database
+  update_interval_s: 30                         # Time between updates of the Chef node
+  organization_uuid_path: redBorder/organization_uuid # Chef path for organization UUID  
+  license_uuid_path: redBorder/license_uuid           # Chef path for license UUID
+  data_bag_name: rBglobal                             # License data bag
+  data_bag_item: licenses                             # Item license data bag
+
