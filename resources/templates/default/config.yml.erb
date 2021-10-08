@@ -12,7 +12,7 @@ decoder:
   product_type_element_id: 144 # Element ID of the field used to verify the DeviceID
 
 updater:
-  chef_server_url: 'erchef.service:8000'
+  chef_server_url: 'https://erchef.service:4443/organizations/redborder'
   node_name: admin
   client_key: /etc/dswatcher/admin.pem
   serial_number_path: redBorder/serial_number
@@ -28,4 +28,5 @@ updater:
   license_uuid_path: redBorder/license_uuid           # Chef path for license UUID
   data_bag_name: rBglobal                             # License data bag
   data_bag_item: licenses                             # Item license data bag
+  skip_ssl: true
 

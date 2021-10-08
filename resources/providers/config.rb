@@ -44,7 +44,8 @@ action :add do
       notifies :restart, "service[dswatcher]", :delayed
     end
 
-    root_pem = Chef::EncryptedDataBagItem.load("certs", "root_pem") rescue root_pem = nil
+    # TODO: Use Chef::EncryptedDataBagItem.load instead
+    root_pem = Chef::DataBagItem.load("certs", "root_pem") rescue root_pem = nil
 
     if !root_pem.nil? and !root_pem["private_rsa"].nil?
       template "/etc/dswatcher/admin.pem" do
