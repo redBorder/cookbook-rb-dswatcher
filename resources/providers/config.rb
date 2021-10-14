@@ -45,7 +45,7 @@ action :add do
     end
 
     # TODO: Use Chef::EncryptedDataBagItem.load instead
-    root_pem = Chef::DataBagItem.load("certs", "root_pem") rescue root_pem = nil
+    root_pem = Chef::DataBagItem.load("certs", "root") rescue root_pem = nil
 
     if !root_pem.nil? and !root_pem["private_rsa"].nil?
       template "/etc/dswatcher/admin.pem" do
