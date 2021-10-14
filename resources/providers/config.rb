@@ -55,6 +55,7 @@ action :add do
         mode 0600
         retries 2
         variables(:private_rsa => root_pem["private_rsa"])
+        cookbook "dswatcher"
       end
     end
 
