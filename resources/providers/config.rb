@@ -63,7 +63,7 @@ action :add do
     service "dswatcher" do
       service_name "dswatcher"
       ignore_failure true
-      supports :status => true, :reload => true, :restart => true, :enable => true
+      supports :status => true, :restart => true, :enable => true
       action [:start, :enable]
     end
 
