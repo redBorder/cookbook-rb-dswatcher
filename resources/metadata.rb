@@ -1,4 +1,4 @@
-name             'dswatcher'
+name             'rbdswatcher'
 maintainer       'David Vanhoucke'
 maintainer_email 'dvanhoucke@redborder.com'
 license          'All rights reserved'
