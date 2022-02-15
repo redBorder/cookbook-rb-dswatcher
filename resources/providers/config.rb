@@ -102,10 +102,10 @@ end
 
 action :register do
   begin
-    if !node["rb-dswatcher"]["registered"]
+    if !node["redborder-dswatcher"]["registered"]
       query = {}
-      query["ID"] = "rb-dswatcher-#{node["hostname"]}"
-      query["Name"] = "rb-dswatcher"
+      query["ID"] = "redborder-dswatcher-#{node["hostname"]}"
+      query["Name"] = "redborder-dswatcher"
       query["Address"] = "#{node["ipaddress"]}"
       query["Port"] = "5000"
       json_query = Chef::JSONCompat.to_json(query)
@@ -115,8 +115,8 @@ action :register do
          action :nothing
       end.run_action(:run)
 
-      node.set["rb-dswatcher"]["registered"] = true
-      Chef::Log.info("RB-Dswatcher service has been registered to consul")
+      node.set["redborder-dswatcher"]["registered"] = true
+      Chef::Log.info("redborder-Dswatcher service has been registered to consul")
     end
   rescue => e
     Chef::Log.error(e.message)
@@ -125,14 +125,14 @@ end
 
 action :deregister do
   begin
-    if node["rb-dswatcher"]["registered"]
+    if node["redborder-dswatcher"]["registered"]
       execute 'Deregister service in consul' do
-        command "curl http://localhost:8500/v1/agent/service/deregister/rb-dswatcher-#{node["hostname"]} &>/dev/null"
+        command "curl http://localhost:8500/v1/agent/service/deregister/redborder-dswatcher-#{node["hostname"]} &>/dev/null"
         action :nothing
       end.run_action(:run)
 
-      node.set["rb-dswatcher"]["registered"] = false
-      Chef::Log.info("RB-Dswatcher service has been deregistered from consul")
+      node.set["redborder-dswatcher"]["registered"] = false
+      Chef::Log.info("redborder-Dswatcher service has been deregistered from consul")
     end
   rescue => e
     Chef::Log.error(e.message)
