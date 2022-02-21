@@ -1,3 +1,3 @@
 #Flags
-default["dswatcher"]["registered"] = false
+default["redborder-dswatcher"]["registered"] = false
 

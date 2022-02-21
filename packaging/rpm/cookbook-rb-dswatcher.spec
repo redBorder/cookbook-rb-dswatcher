@@ -1,6 +1,6 @@
-%global cookbook_path /var/chef/cookbooks/dswatcher
+%global cookbook_path /var/chef/cookbooks/rb-dswatcher
 
-Name: cookbook-dswatcher
+Name: cookbook-rb-dswatcher
 Version: %{__version}
 Release: %{__release}%{?dist}
 BuildArch: noarch
@@ -34,7 +34,7 @@ case "$1" in
   ;;
   2)
     # This is an upgrade.
-    su - -s /bin/bash -c 'source /etc/profile && rvm gemset use default && env knife cookbook upload dswatcher'
+    su - -s /bin/bash -c 'source /etc/profile && rvm gemset use default && env knife cookbook upload rbdswatcher'
   ;;
 esac
 

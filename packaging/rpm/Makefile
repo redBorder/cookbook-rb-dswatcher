@@ -1,4 +1,4 @@
-PACKAGE_NAME?=	cookbook-dswatcher
+PACKAGE_NAME?=	cookbook-rb-dswatcher
 
 VERSION?=	$(shell git describe --abbrev=6 --tags HEAD --always | sed 's/-/_/g')
 
