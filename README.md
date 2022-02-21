@@ -1,4 +1,4 @@
-# cookbook-dswatcher
+# cookbook-rb-dswatcher
 
 This is the cookbook for dswatcher integration in redborder.
 
