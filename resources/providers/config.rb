@@ -12,7 +12,7 @@ action :add do
     user = new_resource.user
     cdomain = new_resource.cdomain
 
-    yum_package "redborder-dswatcher" do
+    dnf_package "redborder-dswatcher" do
       action :upgrade
       flush_cache [:before]
     end
@@ -90,7 +90,7 @@ action :remove do
       end
     end
 
-    yum_package "redborder-dswatcher" do
+    dnf_package "redborder-dswatcher" do
       action :remove
     end
 
