@@ -116,7 +116,7 @@ action :register do
          action :nothing
       end.run_action(:run)
 
-      node.default["redborder-dswatcher"]["registered"] = true
+      node.normal["redborder-dswatcher"]["registered"] = true
       Chef::Log.info("redborder-Dswatcher service has been registered to consul")
     end
   rescue => e
@@ -132,7 +132,7 @@ action :deregister do
         action :nothing
       end.run_action(:run)
 
-      node.default["redborder-dswatcher"]["registered"] = false
+      node.normal["redborder-dswatcher"]["registered"] = false
       Chef::Log.info("redborder-Dswatcher service has been deregistered from consul")
     end
   rescue => e
