@@ -12,14 +12,15 @@ action :add do
     user = new_resource.user
     cdomain = new_resource.cdomain
 
-    yum_package "redborder-dswatcher" do
+    dnf_package "redborder-dswatcher" do
       action :upgrade
       flush_cache [:before]
     end
 
-    user user do
-      action :create
-      system true
+    execute "create_user" do
+      command "/usr/sbin/useradd -r #{user}"
+      ignore_failure true
+      not_if "getent passwd #{user}"
     end
 
     flow_nodes = []
@@ -90,7 +91,7 @@ action :remove do
       end
     end
 
-    yum_package "redborder-dswatcher" do
+    dnf_package "redborder-dswatcher" do
       action :remove
     end
 
@@ -115,7 +116,7 @@ action :register do
          action :nothing
       end.run_action(:run)
 
-      node.set["redborder-dswatcher"]["registered"] = true
+      node.normal["redborder-dswatcher"]["registered"] = true
       Chef::Log.info("redborder-Dswatcher service has been registered to consul")
     end
   rescue => e
@@ -131,7 +132,7 @@ action :deregister do
         action :nothing
       end.run_action(:run)
 
-      node.set["redborder-dswatcher"]["registered"] = false
+      node.normal["redborder-dswatcher"]["registered"] = false
       Chef::Log.info("redborder-Dswatcher service has been deregistered from consul")
     end
   rescue => e

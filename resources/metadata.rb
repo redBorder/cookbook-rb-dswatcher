@@ -1,7 +1,6 @@
 name             'rbdswatcher'
-maintainer       'David Vanhoucke'
-maintainer_email 'dvanhoucke@redborder.com'
-license          'All rights reserved'
+maintainer       'Eneo Tecnología S.L.'
+maintainer_email 'git@redborder.com'
+license          'AGPL-3.0'
 description      'Installs/Configures cookbook-dswatcher'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.0.6'
+version          '0.0.5'
