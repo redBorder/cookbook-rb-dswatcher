@@ -1,12 +1,8 @@
-#
-# Cookbook Name:: rbdswatcher
+# Cookbook:: rbdswatcher
 # Recipe:: default
-#
-# Copyright 2016, redborder
-#
-# All rights reserved - Do Not Redistribute
-#
+# Copyright:: 2024, redborder
+# License:: Affero General Public License, Version 3
 
-rbdswatcher_config "config" do
+rbdswatcher_config 'config' do
   action :add
 end
