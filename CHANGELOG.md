@@ -1,5 +1,10 @@
-cookbook-dswatcher CHANGELOG
-============================
+cookbook-rb-dswatcher CHANGELOG
+===============
+
+## 0.0.6
+
+  - Miguel Negrón
+    - [762cf62] Improvement/fix lint (#6)
 
 This file is used to list changes made in each version of the dswatcher cookbook.
 
