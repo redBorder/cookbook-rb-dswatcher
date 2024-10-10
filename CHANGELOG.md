@@ -1,6 +1,29 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 0.0.7
+
+  - Miguel Negrón
+    - [e21c03f] Add pre and postun to clean the cookbook
+    - [762cf62] Improvement/fix lint (#6)
+    - [cddfd05] Merge pull request #3 from redBorder/bugfix/#15368_fix_register_and_deregister
+    - [0f218f6] Merge with development
+    - [28826a5] Update README.md
+    - [bd97889] Update rpm.yml
+    - [f86e4da] Update metadata.rb
+  - nilsver
+    - [9741b93] Release 0.0.6
+  - Miguel Negrón
+    - [762cf62] Improvement/fix lint (#6)
+    - [cddfd05] Merge pull request #3 from redBorder/bugfix/#15368_fix_register_and_deregister
+    - [28826a5] Update README.md
+    - [bd97889] Update rpm.yml
+    - [f86e4da] Update metadata.rb
+  - Miguel Negrón
+    - [0f218f6] Merge with development
+  - Luis Blanco
+    - [a465447] fix curl
+
 ## 0.0.6
 
   - Miguel Negrón
