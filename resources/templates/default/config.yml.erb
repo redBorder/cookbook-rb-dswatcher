@@ -2,7 +2,7 @@ broker:
   address: 'kafka.service:9092'
   consumer_group: dswatcher  # Kafka consumer group ID
   netflow_topics:
-    - rb_flow_discard  # Topic to look up for the Option Template where the serial number is
+    - rb_flow_post_discard  # Topic to look up for the Option Template where the serial number is
   limits_topics:
     - rb_limits        # Topic listen for notification about sensors limits
 
