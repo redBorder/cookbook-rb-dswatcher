@@ -2,7 +2,7 @@ broker:
   address: 'kafka.service:9092'
   consumer_group: dswatcher  # Kafka consumer group ID
   netflow_topics:
-    - rb_flow_discard  # Topic to look up for the Option Template where the serial number is
+    - rb_flow_post_discard  # Topic to look up for the Option Template where the serial number is
   limits_topics:
     - rb_limits        # Topic listen for notification about sensors limits
 
@@ -15,7 +15,7 @@ updater:
   chef_server_url: 'https://erchef.service:4443/organizations/redborder/'
   node_name: admin
   client_key: /etc/redborder-dswatcher/admin.pem
-#  serial_number_path: redborder/serial_number
+  serial_number_path: redborder
   ipaddress_path: ipaddress
   observation_id_path: redborder/observation_id
   sensor_uuid_path: redborder/sensor_uuid

@@ -1,6 +1,14 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 1.0.0
+
+  - Miguel Negrón
+    - [d21ec19] Merge pull request #8 from redBorder/feature/#21232_refactor_license_system_ng
+  - Rafael Gomez
+    - [1b72933] Fix netflow topic name in config.yml.erb
+    - [d965cd8] Update serial_number_path in config.yml.erb
+
 ## 0.0.7
 
   - Miguel Negrón
