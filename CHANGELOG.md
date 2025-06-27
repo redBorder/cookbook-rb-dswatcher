@@ -1,6 +1,11 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 1.0.1
+
+  - nilsver
+    - [1b3d50d] remove flush cache
+
 ## 1.0.0
 
   - Miguel Negrón
