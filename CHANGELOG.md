@@ -1,6 +1,13 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 1.1.0
+
+  - Miguel Negrón
+    - [4d69b92] Merge pull request #12 from redBorder/bugfix/#22031_add_missing_cdomain_to_chef_config
+  - Rafael Gomez
+    - [24ac04e] Add missing cdomain to config.yml.erb
+
 ## 1.0.1
 
   - nilsver
