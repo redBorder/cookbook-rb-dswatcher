@@ -6,6 +6,7 @@ include Rbdswatcher::Helper
 action :add do
   begin
     user = new_resource.user
+    cdomain = new_resource.cdomain
 
     dnf_package 'redborder-dswatcher' do
       action :upgrade
@@ -33,7 +34,7 @@ action :add do
       mode '0644'
       ignore_failure true
       cookbook 'rbdswatcher'
-      variables(user: user)
+      variables(cdomain: cdomain)
       notifies :restart, 'service[redborder-dswatcher]', :delayed
     end
 
