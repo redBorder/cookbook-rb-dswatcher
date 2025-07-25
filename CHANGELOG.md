@@ -1,10 +1,13 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 1.1.1
+
+  - jnavarrorb
+    - [6f354a1] Remove executable permissions on non-executable files
+
 ## 1.1.0
 
-  - Miguel Negrón
-    - [4d69b92] Merge pull request #12 from redBorder/bugfix/#22031_add_missing_cdomain_to_chef_config
   - Rafael Gomez
     - [24ac04e] Add missing cdomain to config.yml.erb
 
@@ -15,8 +18,6 @@ cookbook-rb-dswatcher CHANGELOG
 
 ## 1.0.0
 
-  - Miguel Negrón
-    - [d21ec19] Merge pull request #8 from redBorder/feature/#21232_refactor_license_system_ng
   - Rafael Gomez
     - [1b72933] Fix netflow topic name in config.yml.erb
     - [d965cd8] Update serial_number_path in config.yml.erb
@@ -26,7 +27,6 @@ cookbook-rb-dswatcher CHANGELOG
   - Miguel Negrón
     - [e21c03f] Add pre and postun to clean the cookbook
     - [762cf62] Improvement/fix lint (#6)
-    - [cddfd05] Merge pull request #3 from redBorder/bugfix/#15368_fix_register_and_deregister
     - [0f218f6] Merge with development
     - [28826a5] Update README.md
     - [bd97889] Update rpm.yml
@@ -35,7 +35,6 @@ cookbook-rb-dswatcher CHANGELOG
     - [9741b93] Release 0.0.6
   - Miguel Negrón
     - [762cf62] Improvement/fix lint (#6)
-    - [cddfd05] Merge pull request #3 from redBorder/bugfix/#15368_fix_register_and_deregister
     - [28826a5] Update README.md
     - [bd97889] Update rpm.yml
     - [f86e4da] Update metadata.rb
