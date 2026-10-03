@@ -1,6 +1,11 @@
 cookbook-rb-dswatcher CHANGELOG
 ===============
 
+## 1.1.2
+
+  - manegron
+    - [5c7d982] Upload cookbook only if opscode-erchef is active
+
 ## 1.1.1
 
   - jnavarrorb
